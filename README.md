@@ -1,5 +1,5 @@
 # Instructions to run locally
-1. Clone this repo (You may delete the pycache folder after cloning).
+1. Clone this repo.
    ```bash
    git clone https://github.com/RealMasterGod/plotly-dash-app.git
    cd plotly-dash-app-main
