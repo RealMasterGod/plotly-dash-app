@@ -6,7 +6,7 @@
    ```
 2. I did not create a virtual environment(venv) but you may if you want to.
    Refer to this link to learn how to set up venv in python https://docs.python.org/3/library/venv.html
-3. Install the dependencies (I am using python version 3+, If you are having trouble with command below you can manually install dependencies link: pip install dependencyname)
+3. Install the dependencies (I am using python version 3+, If you are having trouble with command below you can manually install dependencies like: pip install dependencyname)
    ```bash
    pip install -r requirements.txt
    ```
