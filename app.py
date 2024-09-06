@@ -23,8 +23,8 @@ task2 = db.get_total_amount()
 
 #task 3 - join users table and transactions table to generate a report showing user details along with total amount spent
 task3 = db.total_amount_spent_by_each_user()
-task3['total_amount'].replace(np.nan,0,inplace=True)
-task3['avg_spent'].replace(np.nan,0,inplace=True)
+task3['total_amount'] = task3['total_amount'].replace(np.nan,0)
+task3['avg_spent'] = task3['avg_spent'].replace(np.nan,0)
 
 
 #task 4 - find top three users with max amount spent
