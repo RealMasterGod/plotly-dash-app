@@ -124,13 +124,17 @@ app.layout = html.Div(children=[
     Input('my-date-picker-range', 'start_date'),
     Input('my-date-picker-range', 'end_date'))
 def update_output(start_date, end_date):
+
+    # coverting dates to string format YYYY-MM-DD
     start_date = datetime.strptime(start_date,'%Y-%m-%d').strftime('%Y-%m-%d')
     end_date = datetime.strptime(end_date,'%Y-%m-%d').strftime('%Y-%m-%d')
+    
+    #finding users within start and end date and storing in temp_df
     temp_df = users[(users['join_date'] >= start_date) & (users['join_date'] <= end_date)]
     #create a table having users within start_date and end_date
     return dash_table.DataTable(temp_df.to_dict('records'),[{"name": i, "id": i} for i in temp_df.columns], id='tbl1'),
 
 
-
+# run the app
 if __name__ == "__main__":
     app.run_server(debug=True)
