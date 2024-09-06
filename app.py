@@ -127,7 +127,7 @@ def update_output(start_date, end_date):
     start_date = datetime.strptime(start_date,'%Y-%m-%d').strftime('%Y-%m-%d')
     end_date = datetime.strptime(end_date,'%Y-%m-%d').strftime('%Y-%m-%d')
     temp_df = users[(users['join_date'] >= start_date) & (users['join_date'] <= end_date)]
-    #create a table
+    #create a table having users within start_date and end_date
     return dash_table.DataTable(temp_df.to_dict('records'),[{"name": i, "id": i} for i in temp_df.columns], id='tbl1'),
 
 
